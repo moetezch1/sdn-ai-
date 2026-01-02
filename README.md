@@ -62,6 +62,7 @@ The controller manages all switches through the SDN control plane.
 
 ```text
 sdn-ai-project/
+├── start_project.sh     #Start the project automatically
 ├── topo.py              # Mininet topology definition
 ├── sdn_controller.py    # Ryu SDN controller logic
 ├── ai_detection.py      # AI-based traffic classification service
@@ -70,7 +71,12 @@ sdn-ai-project/
 ```
 
 ## How to Run the Project
+### Automatic start :
 
+```bash
+./start_project.sh
+```
+### Manual Start :
 ### 1️⃣ Activate Virtual Environment
 ```bash
 source ryu38/bin/activate
