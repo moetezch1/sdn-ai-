@@ -76,3 +76,80 @@ sdn-ai-project/
 source ryu38/bin/activate
 ```
 
+### 2️⃣ Start the AI Detection Service
+```bash
+source ryu38/bin/activatepython3 ai_detection.py
+```
+```Runs on:
+[source ryu38/bin/activatepython3 ai_detection.py](http://127.0.0.1:5000
+)
+```
+
+
+### 3️⃣ Start the Dashboard
+```bash
+python3 dashboard.py
+```
+```Runs on:
+http://127.0.0.1:8050
+```
+
+
+### 4️⃣ Start the Ryu Controller
+```bash
+ryu-manager sdn_controller.py
+```
+
+### 5️⃣ Launch the Mininet Topology
+```bash
+sudo python3 topo.py
+```
+
+## 📊 Dashboard Features
+
+- Packet rate per MAC address
+- Traffic status (Forwarded / Attack / Blocked
+- Blocked hosts visualization
+- Live security event logs
+- Real-time updates (1-second refresh)
+
+## 🔐 Attack Detection Logic
+
+- Traffic is classified as malicious if one or more conditions are met:
+- Packet size exceeds the defined threshold
+- Packet rate exceeds packets-per-second limit
+- AI detection service confirms abnormal behavior
+
+
+### Mitigation Actions
+
+- Malicious MAC addresses are blocked
+- Drop flow rules are installed on switches
+- Blocks automatically expire after a timeout
+
+## 🎯 Use Cases
+
+- SDN security experimentation
+- Network monitoring systems
+- DevOps and NOC dashboards
+- AI-assisted traffic analysis
+- Academic and engineering projects
+
+## 🔮 Future Improvements
+
+- Advanced ML models (Isolation Forest, LSTM)
+- Persistent database for event storage
+- User authentication and role management
+- Email and webhook alerting
+- Support for larger and multi-site topologies
+
+
+## 👨‍💻 Author
+
+Moetez Chaouch
+Telecommunications & Intelligent Systems Engineering
+Interests: SDN, AI, Network Security
+
+## 📄 License
+
+This project is intended for educational and research purposes.
