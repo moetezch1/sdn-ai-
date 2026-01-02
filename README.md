@@ -7,44 +7,46 @@ AI-based Intrusion Detection and Mitigation in Software-Defined Networks using M
 ## 📌 Project Overview
 
 This project implements a **real-time network monitoring and security system** for Software-Defined Networks (SDN).  
-It combines **SDN traffic control** with **AI-based attack detection** and a **live monitoring dashboard**.
+It combines **SDN traffic control**, **AI-based attack detection**, and a **live monitoring dashboard**.
 
-The system detects abnormal traffic patterns such as **DoS, flooding, and oversized packets**, and automatically mitigates attacks by installing **drop flow rules** at the SDN level.
+The system detects abnormal traffic patterns such as **DoS attacks, traffic flooding, and oversized packets**, and automatically mitigates threats by installing **drop flow rules** directly on OpenFlow switches.
 
 ---
 
 ## 🏗️ System Architecture
 
-The project is composed of four main components:
+The system is composed of four main components:
 
-1. **Mininet Topology**
-   - Emulates hosts and OpenFlow switches
-   - Generates real network traffic
+### 1. Mininet Topology
+- Emulates a realistic SDN network
+- Hosts and OpenFlow switches
+- Generates live traffic for analysis
 
-2. **Ryu SDN Controller**
-   - Collects Packet-In events
-   - Extracts traffic features (packet size, packet rate)
-   - Applies forwarding or blocking rules dynamically
+### 2. Ryu SDN Controller
+- Handles Packet-In events
+- Extracts traffic features (packet size, packet rate)
+- Applies forwarding or blocking rules dynamically
 
-3. **AI Detection Service (Flask)**
-   - Receives traffic features via REST API
-   - Classifies traffic as normal or attack
-   - Returns real-time decisions to the controller
+### 3. AI Detection Service (Flask)
+- Exposes a REST API for traffic classification
+- Detects abnormal behavior based on traffic features
+- Returns attack decisions to the controller
 
-4. **Real-Time Dashboard (Dash/Plotly)**
-   - Visualizes traffic statistics and alerts
-   - Displays attacks, blocked hosts, and packet rates
-   - Updates live without page refresh
+### 4. Real-Time Dashboard (Dash / Plotly)
+- Displays live traffic statistics
+- Visualizes attacks and blocked hosts
+- Shows packet rates and security events in real time
 
 ---
 
 ## 🌐 Network Topology
 
+### Nodes
 - **Hosts:** h1, h2, h3, h4  
 - **Switches:** s1, s2, s3 (OpenFlow 1.3)  
 - **Controller:** Ryu SDN Controller  
 
-### Links:
+### Links
 - h1 → s1  
 - h2 → s1  
 - s1 → s2  
@@ -52,19 +54,20 @@ The project is composed of four main components:
 - s2 → s3  
 - h4 → s3  
 
-The controller manages all switches via the control plane.
+The controller manages all switches through the SDN control plane.
 
 ---
 
-## ⚙️ Technologies Used
+## 📁 Project Structure
 
-- **Mininet** – Network emulation  
-- **Ryu** – SDN controller (OpenFlow 1.3)  
-- **Flask** – AI detection REST API  
-- **Dash & Plotly** – Real-time dashboard  
-- **Python** – Core development language  
+```text
+sdn-ai-project/
+├── topo.py              # Mininet topology definition
+├── sdn_controller.py    # Ryu SDN controller logic
+├── ai_detection.py      # AI-based traffic classification service
+├── dashboard.py         # Real-time monitoring dashboard
+├── README.md            # Project documentation
 
----
 
 ## 🚀 How to Run the Project
 
