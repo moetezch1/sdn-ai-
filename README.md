@@ -4,7 +4,7 @@ AI-based Intrusion Detection and Mitigation in Software-Defined Networks using M
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project implements a **real-time network monitoring and security system** for Software-Defined Networks (SDN).  
 It combines **SDN traffic control**, **AI-based attack detection**, and a **live monitoring dashboard**.
@@ -13,7 +13,7 @@ The system detects abnormal traffic patterns such as **DoS attacks, traffic floo
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 The system is composed of four main components:
 
@@ -39,7 +39,7 @@ The system is composed of four main components:
 
 ---
 
-## 🌐 Network Topology
+## Network Topology
 
 ### Nodes
 - **Hosts:** h1, h2, h3, h4  
@@ -58,7 +58,7 @@ The controller manages all switches through the SDN control plane.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 sdn-ai-project/
@@ -69,7 +69,7 @@ sdn-ai-project/
 ├── README.md            # Project documentation
 ```
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 ### 1️⃣ Activate Virtual Environment
 ```bash
@@ -105,7 +105,7 @@ ryu-manager sdn_controller.py
 sudo python3 topo.py
 ```
 
-## 📊 Dashboard Features
+## Dashboard Features
 
 - Packet rate per MAC address
 - Traffic status (Forwarded / Attack / Blocked
@@ -113,7 +113,7 @@ sudo python3 topo.py
 - Live security event logs
 - Real-time updates (1-second refresh)
 
-## 🔐 Attack Detection Logic
+## Attack Detection Logic
 
 - Traffic is classified as malicious if one or more conditions are met:
 - Packet size exceeds the defined threshold
@@ -127,7 +127,7 @@ sudo python3 topo.py
 - Drop flow rules are installed on switches
 - Blocks automatically expire after a timeout
 
-## 🎯 Use Cases
+## Use Cases
 
 - SDN security experimentation
 - Network monitoring systems
@@ -135,7 +135,7 @@ sudo python3 topo.py
 - AI-assisted traffic analysis
 - Academic and engineering projects
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Advanced ML models (Isolation Forest, LSTM)
 - Persistent database for event storage
@@ -144,7 +144,7 @@ sudo python3 topo.py
 - Support for larger and multi-site topologies
 
 
-## 👨‍💻 Author
+## Author
 
 Moetez Chaouch
 Telecommunications & Intelligent Systems Engineering
